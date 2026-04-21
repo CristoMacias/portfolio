@@ -4,8 +4,8 @@
   <mat-divider class="divisor-titulo"></mat-divider>
 
   <div class="contenedor-metricas">
+    @for (metrica of metricas; track metrica.etiqueta) {
     <mat-card
-      *ngFor="let metrica of metricas"
       class="tarjeta-metrica"
       appearance="outlined">
       <mat-card-content class="contenido-metrica">
@@ -13,6 +13,7 @@
         <span class="etiqueta-metrica">{{ metrica.etiqueta | translate }}</span>
       </mat-card-content>
     </mat-card>
+    }
   </div>
 
 </section>

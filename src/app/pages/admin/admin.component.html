@@ -24,15 +24,19 @@
   </div>
 
   
-  <div class="loading" *ngIf="loading">Conectando con el servidor...</div>
+  @if (loading) {
+  <div class="loading">Conectando con el servidor...</div>
+  }
 
   
-  <div class="error-msg" *ngIf="connectionError">
+  @if (connectionError) {
+  <div class="error-msg">
     No se puede conectar con el servidor.
   </div>
+  }
 
   
-  <ng-container *ngIf="!loading && !connectionError">
+  @if (!loading && !connectionError) {
     <h2 class="table-label">Registro de visitas</h2>
     <div class="table-box">
       <div class="table-row table-row--head">
@@ -41,7 +45,8 @@
         <span>Proyecto</span>
         <span>Fecha</span>
       </div>
-      <div class="table-row" *ngFor="let visit of visits">
+      @for (visit of visits; track visit.date + '-' + visit.email + '-' + visit.project) {
+      <div class="table-row">
         <span class="user-cell">
           <span class="avatar">{{ getInitials(visit.user) }}</span>
           {{ visit.user }}
@@ -50,10 +55,13 @@
         <span class="project-tag">{{ visit.project }}</span>
         <span class="muted">{{ visit.date | date:'dd MMM yyyy · HH:mm' }}</span>
       </div>
-      <div class="table-empty" *ngIf="visits.length === 0">
+      }
+      @if (visits.length === 0) {
+      <div class="table-empty">
         No hay visitas registradas aún.
       </div>
+      }
     </div>
-  </ng-container>
+  }
 
 </div>

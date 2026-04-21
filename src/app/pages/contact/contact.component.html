@@ -34,7 +34,9 @@
             formControlName="name"
             [class.field__input--error]="isFieldInvalid('name')"
           />
-          <span class="field__error" *ngIf="isFieldInvalid('name')">{{ 'pages.contact.errors.required' | translate }}</span>
+          @if (isFieldInvalid('name')) {
+          <span class="field__error">{{ 'pages.contact.errors.required' | translate }}</span>
+          }
         </div>
 
         <div class="field js-field">
@@ -47,14 +49,18 @@
             formControlName="email"
             [class.field__input--error]="isFieldInvalid('email')"
           />
-          <span class="field__error" *ngIf="isFieldInvalid('email')">{{ 'pages.contact.errors.invalidEmail' | translate }}</span>
+          @if (isFieldInvalid('email')) {
+          <span class="field__error">{{ 'pages.contact.errors.invalidEmail' | translate }}</span>
+          }
         </div>
 
         <div class="field js-field">
           <label class="field__label" for="projectType">{{ 'pages.contact.form.projectType' | translate }}</label>
           <select id="projectType" class="field__input field__select" formControlName="projectType">
             <option value="" disabled selected>{{ 'pages.contact.projectTypes.placeholder' | translate }}</option>
-            <option *ngFor="let type of projectTypes" [value]="type.value">{{ type.labelKey | translate }}</option>
+            @for (type of projectTypes; track type.value) {
+            <option [value]="type.value">{{ type.labelKey | translate }}</option>
+            }
           </select>
         </div>
 
@@ -67,7 +73,9 @@
             formControlName="message"
             [class.field__input--error]="isFieldInvalid('message')"
           ></textarea>
-          <span class="field__error" *ngIf="isFieldInvalid('message')">{{ 'pages.contact.errors.required' | translate }}</span>
+          @if (isFieldInvalid('message')) {
+          <span class="field__error">{{ 'pages.contact.errors.required' | translate }}</span>
+          }
         </div>
 
         <button
@@ -82,37 +90,47 @@
           <span class="submit-btn__arrow">{{ isLoading ? '...' : '→' }}</span>
         </button>
 
-        <div class="form-success" *ngIf="submitted && !isLoading">
+        @if (submitted && !isLoading) {
+        <div class="form-success">
           <span class="form-success__icon">✓</span>
           {{ 'pages.contact.success' | translate }}
         </div>
+        }
       </form>
     </div>
 
     <div class="info-col js-info-col">
       <div class="info-number js-info-number">01</div>
 
-      <div class="info-item js-info-item" *ngFor="let item of contactInfo">
+      @for (item of contactInfo; track item.labelKey) {
+      <div class="info-item js-info-item">
         <span class="info-item__label">{{ item.labelKey | translate }}</span>
         <span class="info-item__value">
-          <a *ngIf="item.href; else plainText" [href]="item.href" class="info-item__link">{{ item.value }}</a>
-          <ng-template #plainText>{{ item.value }}</ng-template>
+          @if (item.href) {
+          <a [href]="item.href" class="info-item__link">{{ item.value }}</a>
+          } @else {
+          {{ item.value }}
+          }
         </span>
       </div>
+      }
 
       <div class="tags">
-        <span class="tag js-tag" *ngFor="let tag of tags">{{ tag | translate }}</span>
+        @for (tag of tags; track tag) {
+        <span class="tag js-tag">{{ tag | translate }}</span>
+        }
       </div>
 
       <div class="social">
+        @for (link of socialLinks; track link.id) {
         <a
-          *ngFor="let link of socialLinks"
           [href]="link.href"
           class="social__btn js-social-btn"
           [attr.aria-label]="link.label"
           target="_blank"
           rel="noopener noreferrer"
         >{{ link.short }}</a>
+        }
       </div>
     </div>
   </div>

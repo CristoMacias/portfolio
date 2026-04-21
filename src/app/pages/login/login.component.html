@@ -14,9 +14,11 @@
           <label for="email" class="login__label">{{ 'pages.login.email' | translate }}</label>
           <input id="email" type="email" formControlName="email" class="login__input"
             [placeholder]="'pages.login.emailPlaceholder' | translate" />
-          <small class="login__error" *ngIf="isFieldInvalid('email')">
+          @if (isFieldInvalid('email')) {
+          <small class="login__error">
             {{ 'pages.login.errors.invalidEmail' | translate }}
           </small>
+          }
         </div>
 
         <div class="login__field">
@@ -32,9 +34,11 @@
             </button>
           </div>
 
-          <small class="login__error" *ngIf="isFieldInvalid('password')">
+          @if (isFieldInvalid('password')) {
+          <small class="login__error">
             {{ 'pages.login.errors.invalidPassword' | translate }}
           </small>
+          }
         </div>
 
         <div class="login__options">
@@ -54,9 +58,11 @@
         </p>
         }
 
-        <p class="login__success" *ngIf="submitted">
+        @if (submitted) {
+        <p class="login__success">
           {{ 'pages.login.success' | translate }}
         </p>
+        }
 
         <p class="login__register">
           {{ 'pages.login.registerPrompt' | translate }}
