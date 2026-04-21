@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { AfterViewInit, Component, OnInit, inject } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { FormacionService } from '../../services/formacion.service';
@@ -45,4 +45,6 @@ export class FormacionComponent implements OnInit {
       }
     });
   }
+
+  
 }

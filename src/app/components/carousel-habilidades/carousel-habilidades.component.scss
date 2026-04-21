@@ -76,3 +76,17 @@
     }
   }
 }
+
+.carousel__viewport {
+  overflow: hidden;
+}
+
+.carousel__track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.carousel__slide {
+  min-width: 100%;
+  flex-shrink: 0;
+}

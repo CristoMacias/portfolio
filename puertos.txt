@@ -1,0 +1,5 @@
+Habilidades -> json-server --watch dbHabilidades.json --port 3001
+Proyectos -> json-server --watch dbProyectos.json --port 3002
+Formacion -> json-server --watch dbFormacion.json --port 3003
+Usuarios -> json-server --watch dbUsuarios.json --port 3004
+Server -> node server.js

@@ -1,6 +1,9 @@
-<div class="carousel">
+<div class="carousel" (mouseenter)="detenerAutoplay()" (mouseleave)="iniciarAutoplay()">
   <div class="carousel__viewport">
-    <div class="carousel__track" [style.transform]="'translateX(-' + indiceActual * 100 + '%)'">
+    <div
+      class="carousel__track"
+      [style.transform]="'translateX(-' + indiceActual * 100 + '%)'"
+    >
       @for (seccion of secciones; track seccion) {
         <div class="carousel__slide">
           <app-carta-habilidad [seccion]="seccion"></app-carta-habilidad>
@@ -10,7 +13,13 @@
   </div>
 
   <div class="carousel__controls">
-    <button type="button" class="carousel__button" (click)="anterior()">&#8249;</button>
+    <button
+      type="button"
+      class="carousel__button"
+      (click)="anterior(); reiniciarAutoplay()"
+    >
+      &#8249;
+    </button>
 
     <div class="carousel__dots">
       @for (seccion of secciones; track seccion; let i = $index) {
@@ -18,12 +27,18 @@
           type="button"
           class="carousel__dot"
           [class.carousel__dot--active]="i === indiceActual"
-          (click)="indiceActual = i"
+          (click)="irA(i); reiniciarAutoplay()"
           [attr.aria-label]="'components.carouselHabilidades.goToSlide' | translate:{ index: i + 1 }"
         ></button>
       }
     </div>
 
-    <button type="button" class="carousel__button" (click)="siguiente()">&#8250;</button>
+    <button
+      type="button"
+      class="carousel__button"
+      (click)="siguiente(); reiniciarAutoplay()"
+    >
+      &#8250;
+    </button>
   </div>
 </div>

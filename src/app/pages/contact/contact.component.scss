@@ -401,3 +401,22 @@ $green-dot:   #3dba6f;
     font-size: 64px;
   }
 }
+
+.section-label__line,
+.hero__title,
+.hero__subtitle,
+.availability,
+.form-col,
+.field,
+.submit-btn,
+.info-col,
+.info-item,
+.tag,
+.social__btn {
+  will-change: transform, opacity;
+}
+
+.section-label__line {
+  display: inline-block;
+  transform-origin: left center;
+}

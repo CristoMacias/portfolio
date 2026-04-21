@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { TranslateModule } from '@ngx-translate/core';
+import { gsap } from 'gsap';
 
 interface PasoTrabajo {
   numero: string;
@@ -17,7 +18,7 @@ interface PasoTrabajo {
   styleUrl: './metodo-trabajo.component.scss',
   standalone: true
 })
-export class MetodoTrabajoComponent {
+export class MetodoTrabajoComponent implements AfterViewInit {
 
   pasos: PasoTrabajo[] = [
     {
@@ -36,5 +37,19 @@ export class MetodoTrabajoComponent {
       descripcion: 'components.metodoTrabajo.steps.3.description'
     }
   ];
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      gsap.from('.card-paso', {
+        opacity: 0,
+        y: 80,
+        rotate: 5,
+        scale: 0.95,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: 'back.out(1.7)'
+      });
+    }, 0);
+  }
 
 }

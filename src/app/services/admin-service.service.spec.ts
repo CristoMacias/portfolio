@@ -1,13 +1,14 @@
+/// <reference types="jasmine" />
 import { TestBed } from '@angular/core/testing';
 
-import { AdminServiceService } from './admin-service.service';
+import { ProjectVisitsService } from './admin-service.service';
 
-describe('AdminServiceService', () => {
-  let service: AdminServiceService;
+describe('ProjectVisitsService', () => {
+  let service: ProjectVisitsService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(AdminServiceService);
+    service = TestBed.inject(ProjectVisitsService);
   });
 
   it('should be created', () => {

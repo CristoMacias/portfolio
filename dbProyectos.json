@@ -6,7 +6,7 @@
       "numero": 1,
       "descripcion": "Proyecto TFG y principal. Plataforma de gestión de actividades culturales en Extremadura que cubre la experiencia 360. Permite interacción con usuarios y gestión por empresas bajo el lema \"Donde la cultura se encuentra contigo\".",
       "tecnologias": ["Angular", "Flutter", "Spring Boot", "Supabase"],
-      "link": "https://github.com/tuusuario/kultux"
+      "link": "https://github.com/orgs/KultuX/dashboard"
     },
     {
       "title": "Ecorecicla",
@@ -14,7 +14,7 @@
       "numero": 2,
       "descripcion": "Proyecto desarrollado con Spring Boot que utiliza APIs, gestión de datos y generación de informes en XML y JSON en el cliente.",
       "tecnologias": ["Spring Boot", "APIs", "XML", "JSON"],
-      "link": "https://github.com/tuusuario/ecorecicla"
+      "link": "https://github.com/CristoMacias/ecorecicla"
     },
     {
       "title": "Spotify",
@@ -22,7 +22,7 @@
       "numero": 3,
       "descripcion": "Aplicación móvil desarrollada con Android Studio y Firebase que replica funcionalidades de Spotify utilizando APIs y desarrollo en Java.",
       "tecnologias": ["Android Studio", "Java", "Firebase", "APIs"],
-      "link": "https://github.com/tuusuario/spotify-clone"
+      "link": "https://github.com/CristoMacias/Spotify"
     },
     {
       "title": "Web AnaMac Estilistas",
@@ -30,7 +30,7 @@
       "numero": 4,
       "descripcion": "Sitio web tipo portfolio para un centro de estética, desarrollado con HTML y CSS para mostrar servicios e información del negocio.",
       "tecnologias": ["HTML", "CSS"],
-      "link": "https://github.com/tuusuario/anamac"
+      "link": "https://github.com/CristoMacias/Proyecto"
     },
     {
       "title": "La batalla de los V pueblos",
@@ -38,7 +38,7 @@
       "numero": 5,
       "descripcion": "Videojuego por turnos donde el jugador combate enemigos, gana experiencia y oro para mejorar su equipo. Desarrollado con HTML, CSS y JavaScript.",
       "tecnologias": ["HTML", "CSS", "JavaScript"],
-      "link": "https://github.com/tuusuario/v-pueblos"
+      "link": "https://github.com/CristoMacias/Videojuego"
     }
   ]
 }

@@ -1,19 +1,23 @@
 <section class="proyectos-section">
   <div class="proyectos-section__header">
-    <div class="proyectos-section__eyebrow">
-      <span class="proyectos-section__eyebrow-line"></span>
-      <span class="proyectos-section__eyebrow-text">{{ 'pages.projects.hero.eyebrow' | translate }}</span>
+    <div class="proyectos-section__eyebrow js-projects-eyebrow">
+      <span class="proyectos-section__eyebrow-line js-projects-line"></span>
+      <span class="proyectos-section__eyebrow-text js-projects-eyebrow-text">
+        {{ 'pages.projects.hero.eyebrow' | translate }}
+      </span>
     </div>
 
-    <h2 class="proyectos-section__title">
+    <h2 class="proyectos-section__title js-projects-title">
       {{ 'pages.projects.hero.titleLine1' | translate }} <br />
       {{ 'pages.projects.hero.titleLine2' | translate }}
     </h2>
 
-    <p class="proyectos-section__intro">
+    <p class="proyectos-section__intro js-projects-intro">
       {{ 'pages.projects.hero.intro' | translate }}
     </p>
   </div>
 
-  <app-lista-proyectos></app-lista-proyectos>
+  <div class="js-projects-list">
+    <app-lista-proyectos></app-lista-proyectos>
+  </div>
 </section>

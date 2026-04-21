@@ -1,34 +1,30 @@
 <section class="contact-component">
-  
-  <div class="hero">
-    <div class="section-label">
-      <span class="section-label__line"></span>
-      <span class="section-label__text">{{ 'pages.contact.hero.label' | translate }}</span>
+  <div class="hero js-contact-hero">
+    <div class="section-label js-section-label">
+      <span class="section-label__line js-section-line"></span>
+      <span class="section-label__text js-section-text">{{ 'pages.contact.hero.label' | translate }}</span>
     </div>
 
-    <h1 class="hero__title">
+    <h1 class="hero__title js-contact-title">
       {{ 'pages.contact.hero.titleLine1' | translate }}<br>
-      {{ 'pages.contact.hero.titleLine2' | translate }} <em class="hero__title--outline">{{ 'pages.contact.hero.titleEmphasis' | translate }}</em>
+      {{ 'pages.contact.hero.titleLine2' | translate }}
+      <em class="hero__title--outline">{{ 'pages.contact.hero.titleEmphasis' | translate }}</em>
     </h1>
 
-    <p class="hero__subtitle">
+    <p class="hero__subtitle js-contact-subtitle">
       {{ 'pages.contact.hero.subtitle' | translate }}
     </p>
 
-    <div class="availability">
+    <div class="availability js-contact-availability">
       <span class="availability__dot"></span>
       <span class="availability__text">{{ 'pages.contact.hero.availability' | translate }}</span>
     </div>
   </div>
 
-  
   <div class="contact-grid">
-
-    
-    <div class="form-col">
+    <div class="form-col js-form-col">
       <form class="contact-form" (ngSubmit)="onSubmit()" [formGroup]="contactForm" novalidate>
-
-        <div class="field">
+        <div class="field js-field">
           <label class="field__label" for="name">{{ 'pages.contact.form.name' | translate }}</label>
           <input
             id="name"
@@ -41,7 +37,7 @@
           <span class="field__error" *ngIf="isFieldInvalid('name')">{{ 'pages.contact.errors.required' | translate }}</span>
         </div>
 
-        <div class="field">
+        <div class="field js-field">
           <label class="field__label" for="email">{{ 'pages.contact.form.email' | translate }}</label>
           <input
             id="email"
@@ -54,7 +50,7 @@
           <span class="field__error" *ngIf="isFieldInvalid('email')">{{ 'pages.contact.errors.invalidEmail' | translate }}</span>
         </div>
 
-        <div class="field">
+        <div class="field js-field">
           <label class="field__label" for="projectType">{{ 'pages.contact.form.projectType' | translate }}</label>
           <select id="projectType" class="field__input field__select" formControlName="projectType">
             <option value="" disabled selected>{{ 'pages.contact.projectTypes.placeholder' | translate }}</option>
@@ -62,7 +58,7 @@
           </select>
         </div>
 
-        <div class="field">
+        <div class="field js-field">
           <label class="field__label" for="message">{{ 'pages.contact.form.message' | translate }}</label>
           <textarea
             id="message"
@@ -76,7 +72,7 @@
 
         <button
           type="submit"
-          class="submit-btn"
+          class="submit-btn js-submit-btn"
           [class.submit-btn--loading]="isLoading"
           [disabled]="isLoading"
         >
@@ -90,15 +86,13 @@
           <span class="form-success__icon">✓</span>
           {{ 'pages.contact.success' | translate }}
         </div>
-
       </form>
     </div>
 
-    
-    <div class="info-col">
-      <div class="info-number">01</div>
+    <div class="info-col js-info-col">
+      <div class="info-number js-info-number">01</div>
 
-      <div class="info-item" *ngFor="let item of contactInfo">
+      <div class="info-item js-info-item" *ngFor="let item of contactInfo">
         <span class="info-item__label">{{ item.labelKey | translate }}</span>
         <span class="info-item__value">
           <a *ngIf="item.href; else plainText" [href]="item.href" class="info-item__link">{{ item.value }}</a>
@@ -107,21 +101,19 @@
       </div>
 
       <div class="tags">
-        <span class="tag" *ngFor="let tag of tags">{{ tag | translate }}</span>
+        <span class="tag js-tag" *ngFor="let tag of tags">{{ tag | translate }}</span>
       </div>
 
       <div class="social">
         <a
           *ngFor="let link of socialLinks"
           [href]="link.href"
-          class="social__btn"
+          class="social__btn js-social-btn"
           [attr.aria-label]="link.label"
           target="_blank"
           rel="noopener noreferrer"
         >{{ link.short }}</a>
       </div>
     </div>
-
   </div>
-
 </section>
