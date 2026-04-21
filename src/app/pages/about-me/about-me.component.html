@@ -1,0 +1,71 @@
+<section class="about-hero">
+  <div class="about-hero__eyebrow">
+    <span class="about-hero__eyebrow-line"></span>
+    <span class="about-hero__eyebrow-text">{{ 'pages.aboutMe.hero.eyebrow' | translate }}</span>
+  </div>
+
+  <h1 class="about-hero__title">
+    {{ 'pages.aboutMe.hero.titleLine1' | translate }}<br />
+    {{ 'pages.aboutMe.hero.titleLine2' | translate }}
+  </h1>
+
+  <p class="about-hero__intro">
+    {{ 'pages.aboutMe.hero.intro' | translate }}
+  </p>
+</section>
+
+<section class="presentacion">
+  <app-encabezado-about-me></app-encabezado-about-me>
+
+  <div class="presentacion__content">
+
+    <div class="section-header">
+      <span class="section-header__num">01</span>
+      <h2 class="section-header__title">{{ 'pages.aboutMe.sections.presentation' | translate }}</h2>
+      <span class="section-header__line"></span>
+    </div>
+
+    <p>
+      {{ 'pages.aboutMe.presentation.p1' | translate }}
+    </p>
+
+    <p>
+      {{ 'pages.aboutMe.presentation.p2' | translate }}
+    </p>
+
+    <p>
+      {{ 'pages.aboutMe.presentation.p3' | translate }}
+    </p>
+    @if (secciones$ | async; as secciones) {
+
+    <div class="section-header">
+      <span class="section-header__num">02</span>
+      <h2 class="section-header__title">{{ 'pages.aboutMe.sections.skills' | translate }}</h2>
+      <span class="section-header__line"></span>
+    </div>
+    <app-carousel-habilidades [secciones]="secciones"></app-carousel-habilidades>
+    }
+  </div>
+
+  <div class="formacion">
+    <div class="section-header">
+      <span class="section-header__num">03</span>
+      <h2 class="section-header__title">{{ 'pages.aboutMe.sections.education' | translate }}</h2>
+      <span class="section-header__line"></span>
+    </div>
+    <app-formacion></app-formacion>
+  </div>
+
+  <section class="cta-contacto">
+    <div class="cta-contacto__contenido">
+      <span class="cta-contacto__eyebrow">{{ 'pages.aboutMe.cta.eyebrow' | translate }}</span>
+      <h2 class="cta-contacto__titulo">{{ 'pages.aboutMe.cta.title' | translate }}</h2>
+    </div>
+
+    <a routerLink="/contact" class="cta-contacto__boton">
+      <span>{{ 'pages.aboutMe.cta.button' | translate }}</span>
+      <span class="cta-contacto__icono">→</span>
+    </a>
+  </section>
+
+</section>

@@ -1,0 +1,85 @@
+.seccion-numeros {
+  padding: 4rem 2rem;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.titulo-seccion {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 1rem;
+}
+
+.divisor-titulo {
+  margin-bottom: 3rem;
+  border-top-color: rgba(0, 0, 0, 0.15);
+}
+
+.contenedor-metricas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.tarjeta-metrica {
+  border-radius: 4px;
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    border-color: rgba(0, 0, 0, 0.35);
+    transform: translateY(-3px);
+  }
+}
+
+.contenido-metrica {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 1.75rem 2rem;
+
+  &:last-child {
+    padding-bottom: 1.75rem;
+  }
+}
+
+.valor-metrica {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.etiqueta-metrica {
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+
+@media (max-width: 720px) {
+  .contenedor-metricas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor-metricas {
+    grid-template-columns: 1fr;
+  }
+
+  .titulo-seccion {
+    font-size: 1.5rem;
+  }
+
+  .valor-metrica {
+    font-size: 1.6rem;
+  }
+}

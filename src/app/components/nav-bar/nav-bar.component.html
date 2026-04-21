@@ -1,0 +1,96 @@
+<mat-sidenav-container class="layout">
+  <mat-sidenav [opened]="NavBarActive" class="sidebar" mode="over" position="start">
+    <div class="sidebar__inner">
+      <div class="sidebar__header">
+        <span class="sidebar__title">{{ 'components.navBar.sidebar.title' | translate }}</span>
+
+        <button mat-icon-button type="button" [attr.aria-label]="'components.navBar.sidebar.closeMenuAria' | translate"
+          (click)="pulsarNavBar()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+
+      <nav class="sidebar__nav">
+        <a mat-button routerLink="/home" routerLinkActive="active" (click)="pulsarNavBar()">
+          {{ 'components.navBar.sidebar.home' | translate }}
+        </a>
+
+        <a mat-button routerLink="/aboutMe" routerLinkActive="active" (click)="pulsarNavBar()">
+          {{ 'components.navBar.sidebar.about' | translate }}
+        </a>
+
+        <a mat-button routerLink="/projects" routerLinkActive="active" (click)="pulsarNavBar()">
+          {{ 'components.navBar.sidebar.projects' | translate }}
+        </a>
+
+        <a mat-button routerLink="/contact" routerLinkActive="active" (click)="pulsarNavBar()">
+          {{ 'components.navBar.sidebar.contact' | translate }}
+        </a>
+        @if (usuarioAdmin) {
+        <a mat-button routerLink="/admin" routerLinkActive="active" (click)="pulsarNavBar()">
+          Admin
+        </a>
+        }
+      </nav>
+
+      <div class="sidebar__bottom">
+        @if (!sesionIniciada) {
+        <a mat-stroked-button class="sidebar__login" routerLink="/login" (click)="pulsarNavBar()">
+          <mat-icon>login</mat-icon>
+          <span>{{ 'components.navBar.sidebar.login' | translate }}</span>
+        </a>
+        } @else {
+        <button mat-stroked-button class="sidebar__login" (click)="cerrarSesion(); pulsarNavBar()">
+          <mat-icon>logout</mat-icon>
+          <span>{{ 'components.navBar.sidebar.logout' | translate }}</span>
+        </button>
+        }
+
+        <div class="sidebar__footer">
+          <span>{{ 'components.navBar.sidebar.footer' | translate }}</span>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="shell-content">
+    <header class="topbar">
+      <button mat-icon-button type="button" [attr.aria-label]="'components.navBar.topbar.openMenuAria' | translate"
+        (click)="pulsarNavBar()">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <span class="topbar__brand">Cristo Macías</span>
+
+      <div class="topbar__right">
+        @if (sesionIniciada) {
+        <span class="topbar__user">
+          {{ 'components.navBar.topbar.greeting' | translate:{ name: nombre } }}
+        </span>
+        }
+
+        <div class="language-box">
+          @if (idioma === 'es') {
+          <img src="/assets/Bandera_nacional_de_España.png" alt="Bandera de España" class="bandera">
+          } @else if (idioma === 'en') {
+          <img
+            src="/assets/png-clipart-flag-of-england-flag-of-the-united-kingdom-flag-of-the-city-of-london-england-angle-english.png"
+            alt="Bandera de Inglaterra" class="bandera">
+          } @else {
+          <img src="/assets/bandera-alemana-alemania_469558-8411.jpg" alt="Bandera de Alemania" class="bandera">
+          }
+
+          <select class="language-select" [value]="idioma" (change)="cambiarIdioma($event)">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      <ng-content></ng-content>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,48 @@
+<article
+  class="proyecto-card"
+  [class.proyecto-card--destacado]="destacado"
+>
+  <div class="proyecto-card__media">
+    <img
+      class="proyecto-card__imagen"
+      [src]="proyecto.imagenUrl"
+      [alt]="proyecto.title"
+    />
+  </div>
+
+  <div class="proyecto-card__contenido">
+    @if (destacado) {
+      <span class="proyecto-card__badge">{{ 'components.proyecto.featured' | translate }}</span>
+    }
+
+    <span class="proyecto-card__numero">
+      {{ proyecto.numero < 10 ? '0' + proyecto.numero : proyecto.numero }}
+    </span>
+
+    <div class="proyecto-card__tecnologias">
+      @for (tecnologia of proyecto.tecnologias; track tecnologia) {
+        <span class="proyecto-card__tag">
+          {{ tecnologia }}
+        </span>
+      }
+    </div>
+
+    <h3 class="proyecto-card__titulo">
+      {{ proyecto.title }}
+    </h3>
+
+    <p class="proyecto-card__descripcion">
+      {{ proyecto.descripcion }}
+    </p>
+
+    <a
+      class="proyecto-card__link"
+      [href]="proyecto.link"
+      target="_blank"
+      rel="noopener noreferrer"
+      [attr.aria-label]="'components.proyecto.ariaRepo' | translate:{ title: proyecto.title }"
+    >
+      {{ 'components.proyecto.github' | translate }}
+    </a>
+  </div>
+</article>

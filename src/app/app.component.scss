@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.content {
+  min-height: 0;
+  overflow: auto;
+}
+.footer {
+  margin-top: 0;
+}

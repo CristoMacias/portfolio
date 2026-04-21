@@ -1,0 +1,127 @@
+<section class="contact-component">
+  
+  <div class="hero">
+    <div class="section-label">
+      <span class="section-label__line"></span>
+      <span class="section-label__text">{{ 'pages.contact.hero.label' | translate }}</span>
+    </div>
+
+    <h1 class="hero__title">
+      {{ 'pages.contact.hero.titleLine1' | translate }}<br>
+      {{ 'pages.contact.hero.titleLine2' | translate }} <em class="hero__title--outline">{{ 'pages.contact.hero.titleEmphasis' | translate }}</em>
+    </h1>
+
+    <p class="hero__subtitle">
+      {{ 'pages.contact.hero.subtitle' | translate }}
+    </p>
+
+    <div class="availability">
+      <span class="availability__dot"></span>
+      <span class="availability__text">{{ 'pages.contact.hero.availability' | translate }}</span>
+    </div>
+  </div>
+
+  
+  <div class="contact-grid">
+
+    
+    <div class="form-col">
+      <form class="contact-form" (ngSubmit)="onSubmit()" [formGroup]="contactForm" novalidate>
+
+        <div class="field">
+          <label class="field__label" for="name">{{ 'pages.contact.form.name' | translate }}</label>
+          <input
+            id="name"
+            type="text"
+            class="field__input"
+            [placeholder]="'pages.contact.form.namePlaceholder' | translate"
+            formControlName="name"
+            [class.field__input--error]="isFieldInvalid('name')"
+          />
+          <span class="field__error" *ngIf="isFieldInvalid('name')">{{ 'pages.contact.errors.required' | translate }}</span>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="email">{{ 'pages.contact.form.email' | translate }}</label>
+          <input
+            id="email"
+            type="email"
+            class="field__input"
+            [placeholder]="'pages.contact.form.emailPlaceholder' | translate"
+            formControlName="email"
+            [class.field__input--error]="isFieldInvalid('email')"
+          />
+          <span class="field__error" *ngIf="isFieldInvalid('email')">{{ 'pages.contact.errors.invalidEmail' | translate }}</span>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="projectType">{{ 'pages.contact.form.projectType' | translate }}</label>
+          <select id="projectType" class="field__input field__select" formControlName="projectType">
+            <option value="" disabled selected>{{ 'pages.contact.projectTypes.placeholder' | translate }}</option>
+            <option *ngFor="let type of projectTypes" [value]="type.value">{{ type.labelKey | translate }}</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="message">{{ 'pages.contact.form.message' | translate }}</label>
+          <textarea
+            id="message"
+            class="field__input field__textarea"
+            [placeholder]="'pages.contact.form.messagePlaceholder' | translate"
+            formControlName="message"
+            [class.field__input--error]="isFieldInvalid('message')"
+          ></textarea>
+          <span class="field__error" *ngIf="isFieldInvalid('message')">{{ 'pages.contact.errors.required' | translate }}</span>
+        </div>
+
+        <button
+          type="submit"
+          class="submit-btn"
+          [class.submit-btn--loading]="isLoading"
+          [disabled]="isLoading"
+        >
+          <span class="submit-btn__text">
+            {{ isLoading ? ('pages.contact.submit.sending' | translate) : ('pages.contact.submit.send' | translate) }}
+          </span>
+          <span class="submit-btn__arrow">{{ isLoading ? '...' : '→' }}</span>
+        </button>
+
+        <div class="form-success" *ngIf="submitted && !isLoading">
+          <span class="form-success__icon">✓</span>
+          {{ 'pages.contact.success' | translate }}
+        </div>
+
+      </form>
+    </div>
+
+    
+    <div class="info-col">
+      <div class="info-number">01</div>
+
+      <div class="info-item" *ngFor="let item of contactInfo">
+        <span class="info-item__label">{{ item.labelKey | translate }}</span>
+        <span class="info-item__value">
+          <a *ngIf="item.href; else plainText" [href]="item.href" class="info-item__link">{{ item.value }}</a>
+          <ng-template #plainText>{{ item.value }}</ng-template>
+        </span>
+      </div>
+
+      <div class="tags">
+        <span class="tag" *ngFor="let tag of tags">{{ tag | translate }}</span>
+      </div>
+
+      <div class="social">
+        <a
+          *ngFor="let link of socialLinks"
+          [href]="link.href"
+          class="social__btn"
+          [attr.aria-label]="link.label"
+          target="_blank"
+          rel="noopener noreferrer"
+        >{{ link.short }}</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>

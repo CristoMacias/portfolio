@@ -1,0 +1,68 @@
+<section class="login">
+  <div class="login__wrapper">
+    <div class="login__intro">
+      <p class="login__eyebrow">{{ 'pages.login.eyebrow' | translate }}</p>
+      <h1 class="login__title">{{ 'pages.login.title' | translate }}</h1>
+      <p class="login__subtitle">
+        {{ 'pages.login.subtitle' | translate }}
+      </p>
+    </div>
+
+    <div class="login__card">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login__form">
+        <div class="login__field">
+          <label for="email" class="login__label">{{ 'pages.login.email' | translate }}</label>
+          <input id="email" type="email" formControlName="email" class="login__input"
+            [placeholder]="'pages.login.emailPlaceholder' | translate" />
+          <small class="login__error" *ngIf="isFieldInvalid('email')">
+            {{ 'pages.login.errors.invalidEmail' | translate }}
+          </small>
+        </div>
+
+        <div class="login__field">
+          <label for="password" class="login__label">{{ 'pages.login.password' | translate }}</label>
+
+          <div class="login__password-wrapper">
+            <input id="password" [type]="showPassword ? 'text' : 'password'" formControlName="password"
+              class="login__input login__input--password" [placeholder]="'pages.login.passwordPlaceholder' | translate" />
+
+            <button type="button" class="login__toggle" (click)="togglePasswordVisibility()"
+              [attr.aria-label]="'pages.login.togglePasswordAria' | translate">
+              {{ showPassword ? ('pages.login.togglePassword.hide' | translate) : ('pages.login.togglePassword.show' | translate) }}
+            </button>
+          </div>
+
+          <small class="login__error" *ngIf="isFieldInvalid('password')">
+            {{ 'pages.login.errors.invalidPassword' | translate }}
+          </small>
+        </div>
+
+        <div class="login__options">
+          <label class="login__check">
+            <input type="checkbox" formControlName="rememberSession" />
+            <span>{{ 'pages.login.remember' | translate }}</span>
+          </label>
+        </div>
+
+        <button type="submit" class="login__submit" [disabled]="isLoading">
+          {{ isLoading ? ('pages.login.submit.loading' | translate) : ('pages.login.submit.default' | translate) }}
+        </button>
+
+        @if (loginError) {
+        <p class="login__error">
+          {{ loginError | translate }}
+        </p>
+        }
+
+        <p class="login__success" *ngIf="submitted">
+          {{ 'pages.login.success' | translate }}
+        </p>
+
+        <p class="login__register">
+          {{ 'pages.login.registerPrompt' | translate }}
+          <a routerLink="/register" class="login__link">{{ 'pages.login.registerLink' | translate }}</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</section>

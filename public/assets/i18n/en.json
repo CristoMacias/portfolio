@@ -1,0 +1,238 @@
+{
+  "pages": {
+    "home": {
+      "hero": {
+        "imageAlt": "Cristo Macias",
+        "role": "Full Stack Developer"
+      }
+    },
+    "aboutMe": {
+      "hero": {
+        "eyebrow": "Who I am",
+        "titleLine1": "About",
+        "titleLine2": "me",
+        "intro": "Full Stack Developer with a pragmatic mindset, focused on writing clean, documented code ready to scale."
+      },
+      "sections": {
+        "presentation": "Presentation",
+        "skills": "Skills",
+        "education": "Education"
+      },
+      "presentation": {
+        "p1": "I am Cristo Macias, a Full Stack Developer with more than five years building web applications that blend polished interfaces with solid backend architecture.",
+        "p2": "My specialty is Angular and the TypeScript ecosystem on the frontend, together with Node.js and relational databases on the server. I care as much about code working as about it being maintainable by another developer in two years.",
+        "p3": "I have worked independently since 2022, collaborating with companies and startups that need a trusted developer capable of moving from requirements to production deployment."
+      },
+      "cta": {
+        "eyebrow": "DO YOU HAVE A PROJECT?",
+        "title": "Let's talk",
+        "button": "Contact"
+      }
+    },
+    "projects": {
+      "hero": {
+        "eyebrow": "Projects",
+        "titleLine1": "What",
+        "titleLine2": "I have built.",
+        "intro": "A selection of projects where I combine design, architecture, and development."
+      }
+    },
+    "contact": {
+      "hero": {
+        "label": "Contact",
+        "titleLine1": "Let's talk",
+        "titleLine2": "about your",
+        "titleEmphasis": "idea.",
+        "subtitle": "Tell me what you are building. I reply in under 24 hours.",
+        "availability": "Available for new projects"
+      },
+      "form": {
+        "name": "Name",
+        "namePlaceholder": "Your full name",
+        "email": "Email",
+        "emailPlaceholder": "you@email.com",
+        "projectType": "Project type",
+        "message": "Message",
+        "messagePlaceholder": "Tell me about your project..."
+      },
+      "projectTypes": {
+        "placeholder": "- Select an option",
+        "webDesign": "Web design",
+        "fullstack": "Full stack development",
+        "consulting": "Consulting",
+        "other": "Other"
+      },
+      "errors": {
+        "required": "Required field",
+        "invalidEmail": "Invalid email"
+      },
+      "submit": {
+        "sending": "Sending...",
+        "send": "Send message"
+      },
+      "success": "Message sent. I will reply soon.",
+      "info": {
+        "email": "Email",
+        "location": "Location",
+        "response": "Estimated response"
+      },
+      "tags": {
+        "design": "Design",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "supabase": "Supabase",
+        "python": "Python"
+      }
+    },
+    "login": {
+      "eyebrow": "Access",
+      "title": "Welcome",
+      "subtitle": "Sign in to access projects and other experiences.",
+      "email": "Email",
+      "emailPlaceholder": "youremail@example.com",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "togglePasswordAria": "Show or hide password",
+      "togglePassword": {
+        "show": "Show",
+        "hide": "Hide"
+      },
+      "remember": "Keep me signed in",
+      "submit": {
+        "loading": "Signing in...",
+        "default": "Sign in"
+      },
+      "errors": {
+        "invalidEmail": "Enter a valid email.",
+        "invalidPassword": "Password must be at least 6 characters.",
+        "userNotFound": "User does not exist",
+        "wrongPassword": "Wrong password",
+        "server": "Error connecting to server"
+      },
+      "success": "Signed in successfully.",
+      "registerPrompt": "Do not have an account yet?",
+      "registerLink": "Sign up"
+    },
+    "registro": {
+      "eyebrow": "Register",
+      "titleLine1": "Create your",
+      "titleLine2": "account.",
+      "subtitle": "Join to access exclusive projects and collaborate in real time.",
+      "formTitle": "New account",
+      "alreadyHaveAccount": "Already have an account?",
+      "loginLink": "Sign in",
+      "fields": {
+        "name": "Name",
+        "namePlaceholder": "Your name",
+        "email": "Email",
+        "emailPlaceholder": "youremail@example.com",
+        "password": "Password",
+        "passwordPlaceholder": "At least 6 characters",
+        "confirmPassword": "Repeat password",
+        "confirmPasswordPlaceholder": "Repeat your password"
+      },
+      "errors": {
+        "nameRequired": "Name is required.",
+        "emailRequired": "Email is required.",
+        "emailInvalid": "Enter a valid email.",
+        "emailDuplicated": "This email is already registered.",
+        "passwordMin": "Password must be at least 6 characters.",
+        "passwordMismatch": "Passwords do not match.",
+        "saveUser": "Could not save the user on the server.",
+        "checkEmail": "Could not verify if the email already exists."
+      },
+      "submit": {
+        "loading": "Creating account...",
+        "default": "Create account"
+      },
+      "success": "Account created successfully!"
+    }
+  },
+  "components": {
+    "navBar": {
+      "sidebar": {
+        "title": "Menu",
+        "closeMenuAria": "Close menu",
+        "home": "Home",
+        "about": "About me",
+        "projects": "Projects",
+        "contact": "Contact",
+        "login": "Login",
+        "logout": "Logout",
+        "footer": "Portfolio"
+      },
+      "topbar": {
+        "openMenuAria": "Open menu",
+        "greeting": "Hi, {{name}}"
+      }
+    },
+    "footer": {
+      "role": "Full Stack Developer",
+      "copyright": "Copyright 2026 Cristo Macias. All rights reserved.",
+      "githubAria": "GitHub",
+      "linkedinAria": "LinkedIn",
+      "emailAria": "Email",
+      "githubAlt": "Github",
+      "linkedinAlt": "LinkedIn",
+      "emailAlt": "Gmail"
+    },
+    "metodoTrabajo": {
+      "title": "How I work",
+      "steps": {
+        "1": {
+          "title": "I listen",
+          "description": "I understand the problem before writing a line of code. A good solution starts by asking the right questions."
+        },
+        "2": {
+          "title": "I build",
+          "description": "Fast iterations with continuous feedback. I prefer showing real progress over promises on paper."
+        },
+        "3": {
+          "title": "I deliver",
+          "description": "Clean, documented code ready to scale. The project does not end at deploy time, it ends when it truly works."
+        }
+      }
+    },
+    "numerosVistazo": {
+      "title": "At a glance",
+      "metrics": {
+        "projectsDelivered": "Delivered projects",
+        "experience": "Professional experience",
+        "stack": "Main stack"
+      }
+    },
+    "carouselHabilidades": {
+      "goToSlide": "Go to slide {{index}}"
+    },
+    "encabezadoAboutMe": {
+      "imageAlt": "Profile photo of Cristo Macias",
+      "fields": {
+        "location": "Location",
+        "modality": "Work mode",
+        "availability": "Availability",
+        "email": "Email",
+        "github": "GitHub",
+        "linkedin": "LinkedIn"
+      },
+      "values": {
+        "location": "Merida, Spain",
+        "modality": "Remote / On-site",
+        "availability": "April 2026"
+      }
+    },
+    "proyecto": {
+      "featured": "Featured project",
+      "github": "GitHub ->",
+      "ariaRepo": "View GitHub repository for {{title}}"
+    },
+    "listaProyectos": {
+      "loading": "Loading projects...",
+      "error": "An error occurred while loading projects."
+    },
+    "disponibilidad": {
+      "statusLabel": "Available for new projects",
+      "detail": "April 2026",
+      "response": "I reply in less than 24h"
+    }
+  }
+}

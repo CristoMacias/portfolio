@@ -1,0 +1,60 @@
+<section class="profile-card">
+  <figure class="profile-card__image-wrapper">
+    <img
+      src="/assets/foto-perfil.JPG"
+      [alt]="'components.encabezadoAboutMe.imageAlt' | translate"
+      class="profile-card__image"
+    />
+  </figure>
+
+  <div class="profile-card__info">
+    <div class="profile-row">
+      <span class="profile-row__label">{{ 'components.encabezadoAboutMe.fields.location' | translate }}</span>
+      <span class="profile-row__value">{{ 'components.encabezadoAboutMe.values.location' | translate }}</span>
+    </div>
+
+    <div class="profile-row">
+      <span class="profile-row__label">{{ 'components.encabezadoAboutMe.fields.modality' | translate }}</span>
+      <span class="profile-row__value">{{ 'components.encabezadoAboutMe.values.modality' | translate }}</span>
+    </div>
+
+    <div class="profile-row">
+      <span class="profile-row__label">{{ 'components.encabezadoAboutMe.fields.availability' | translate }}</span>
+      <span class="profile-row__value">{{ 'components.encabezadoAboutMe.values.availability' | translate }}</span>
+    </div>
+
+    <div class="profile-row">
+      <span class="profile-row__label">{{ 'components.encabezadoAboutMe.fields.email' | translate }}</span>
+      <a
+        class="profile-row__value profile-row__link"
+        href="mailto:cristomac.izaguirre&#64;gmail.com"
+      >
+        cristomac.izaguirre&#64;gmail.com
+      </a>
+    </div>
+
+    <div class="profile-row">
+      <span class="profile-row__label">{{ 'components.encabezadoAboutMe.fields.github' | translate }}</span>
+      <a
+        class="profile-row__value profile-row__link"
+        href="https://github.com/CristoMacias"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        &#64;CristoMacias
+      </a>
+    </div>
+
+    <div class="profile-row">
+      <span class="profile-row__label">{{ 'components.encabezadoAboutMe.fields.linkedin' | translate }}</span>
+      <a
+        class="profile-row__value profile-row__link"
+        href="https://linkedin.com/in/cristomacias"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        in/cristomacias
+      </a>
+    </div>
+  </div>
+</section>

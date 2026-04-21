@@ -1,0 +1,49 @@
+{
+    "formacion": [
+        {
+            "numero": 1,
+            "titulo": "Spring Boot",
+            "descripcion": "Desarrollo de APIs robustas y escalables con Spring Boot, aplicando buenas prácticas de arquitectura y gestión eficiente de dependencias en entornos backend."
+        },
+        {
+            "numero": 2,
+            "titulo": "Java",
+            "descripcion": "Dominio de programación orientada a objetos en Java, con enfoque en código mantenible, tipado fuerte y desarrollo de aplicaciones empresariales sólidas."
+        },
+        {
+            "numero": 3,
+            "titulo": "Android",
+            "descripcion": "Desarrollo de aplicaciones móviles nativas en Android, cuidando la experiencia de usuario, el rendimiento y la correcta gestión del ciclo de vida."
+        },
+        {
+            "numero": 4,
+            "titulo": "Flutter",
+            "descripcion": "Creación de aplicaciones multiplataforma con Flutter, optimizando la reutilización de código y ofreciendo interfaces modernas y fluidas."
+        },
+        {
+            "numero": 5,
+            "titulo": "Angular",
+            "descripcion": "Desarrollo de aplicaciones frontend escalables con Angular, utilizando TypeScript, arquitectura modular y buenas prácticas de rendimiento."
+        },
+        {
+            "numero": 6,
+            "titulo": "Python",
+            "descripcion": "Programación versátil con Python para automatización, backend y procesamiento de datos, priorizando claridad y eficiencia en el código."
+        },
+        {
+            "numero": 7,
+            "titulo": "Supabase",
+            "descripcion": "Uso de Supabase como backend moderno, integrando autenticación, base de datos y APIs en tiempo real de forma rápida y eficiente."
+        },
+        {
+            "numero": 8,
+            "titulo": "Oracle SQL",
+            "descripcion": "Gestión avanzada de bases de datos con Oracle SQL, optimizando consultas y asegurando integridad y rendimiento en entornos empresariales."
+        },
+        {
+            "numero": 9,
+            "titulo": "MySQL",
+            "descripcion": "Diseño y administración de bases de datos MySQL, con enfoque en consultas eficientes, normalización y manejo adecuado de la información."
+        }
+    ]
+}

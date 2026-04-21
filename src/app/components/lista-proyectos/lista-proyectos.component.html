@@ -1,0 +1,51 @@
+<section class="lista-proyectos">
+  @if (!cargando() && !error()) {
+    <div class="lista-proyectos__filtros">
+      @for (tecnologia of tecnologiasDisponibles(); track trackByTecnologia($index, tecnologia)) {
+        <button
+          type="button"
+          class="lista-proyectos__filtro"
+          [class.lista-proyectos__filtro--activo]="filtroTecnologia() === tecnologia"
+          (click)="cambiarFiltro(tecnologia)"
+        >
+          {{ tecnologia }}
+        </button>
+      }
+    </div>
+  }
+
+  @if (cargando()) {
+    <p class="lista-proyectos__estado">{{ 'components.listaProyectos.loading' | translate }}</p>
+  }
+
+  @if (error()) {
+    <p class="lista-proyectos__estado lista-proyectos__estado--error">
+      {{ 'components.listaProyectos.error' | translate }}
+    </p>
+  }
+
+  @if (!cargando() && !error() && proyectoDestacado()) {
+    <div class="lista-proyectos__contenedor">
+      <div class="lista-proyectos__destacado">
+        <app-proyecto
+          [proyecto]="proyectoDestacado()!"
+          [destacado]="true"
+        />
+      </div>
+
+      @if (proyectosRestantes().length > 0) {
+        <div class="lista-proyectos__grid">
+          @for (proyecto of proyectosRestantes(); track trackByNumero($index, proyecto)) {
+            <app-proyecto [proyecto]="proyecto" />
+          }
+        </div>
+      }
+    </div>
+  }
+
+  @if (!cargando() && !error() && !proyectoDestacado()) {
+    <p class="lista-proyectos__estado">
+      No hay proyectos para esta tecnología.
+    </p>
+  }
+</section>

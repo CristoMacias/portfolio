@@ -1,0 +1,59 @@
+<div class="dashboard">
+
+  
+  <div class="dashboard__header">
+    <h1 class="dashboard__title">Resumen del panel</h1>
+    <span class="dashboard__date">{{ today | date:'MMMM yyyy' }}</span>
+    <span class="connection-dot" [class.connection-dot--ok]="!connectionError" [class.connection-dot--error]="connectionError">
+      {{ connectionError ? 'Sin conexión' : 'En vivo' }}
+    </span>
+  </div>
+
+  
+  <div class="stats-grid">
+    <div class="stat-card">
+      <span class="stat-card__label">Visitas totales</span>
+      <span class="stat-card__value">{{ totalVisits }}</span>
+      <span class="stat-card__sub">Proyectos visitados</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-card__label">Usuarios únicos</span>
+      <span class="stat-card__value">{{ totalUsers }}</span>
+      <span class="stat-card__sub">Con acceso a proyectos</span>
+    </div>
+  </div>
+
+  
+  <div class="loading" *ngIf="loading">Conectando con el servidor...</div>
+
+  
+  <div class="error-msg" *ngIf="connectionError">
+    No se puede conectar con el servidor SSE. Asegúrate de que <code>server.js</code> está corriendo en el puerto 3000.
+  </div>
+
+  
+  <ng-container *ngIf="!loading && !connectionError">
+    <h2 class="table-label">Registro de visitas</h2>
+    <div class="table-box">
+      <div class="table-row table-row--head">
+        <span>Usuario</span>
+        <span>Email</span>
+        <span>Proyecto</span>
+        <span>Fecha</span>
+      </div>
+      <div class="table-row" *ngFor="let visit of visits">
+        <span class="user-cell">
+          <span class="avatar">{{ getInitials(visit.user) }}</span>
+          {{ visit.user }}
+        </span>
+        <span class="muted">{{ visit.email }}</span>
+        <span class="project-tag">{{ visit.project }}</span>
+        <span class="muted">{{ visit.date | date:'dd MMM yyyy · HH:mm' }}</span>
+      </div>
+      <div class="table-empty" *ngIf="visits.length === 0">
+        No hay visitas registradas aún.
+      </div>
+    </div>
+  </ng-container>
+
+</div>

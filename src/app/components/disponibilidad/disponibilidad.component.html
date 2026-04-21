@@ -1,0 +1,18 @@
+<section class="seccion-disponibilidad">
+  <mat-card class="tarjeta-disponibilidad" [ngClass]="'estado-' + disponibilidad.estado">
+    <mat-card-content class="contenido-tarjeta">
+      <div class="contenedor-punto">
+        <span class="punto-estado"></span>
+        <span class="anillo-estado"></span>
+      </div>
+      <div class="info-estado">
+        <span class="etiqueta-estado mat-body-1">{{ disponibilidad.etiqueta | translate }}</span>
+        <span class="detalle-estado mat-body-2">
+          {{ disponibilidad.detalle | translate }}
+          <span class="separador">·</span>
+          {{ disponibilidad.tiempoRespuesta | translate }}
+        </span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</section>

@@ -1,0 +1,238 @@
+{
+  "pages": {
+    "home": {
+      "hero": {
+        "imageAlt": "Cristo Macias",
+        "role": "Full Stack Developer"
+      }
+    },
+    "aboutMe": {
+      "hero": {
+        "eyebrow": "Quien soy",
+        "titleLine1": "Sobre",
+        "titleLine2": "mi",
+        "intro": "Desarrollador Full Stack con enfoque pragmatico, comprometido con escribir codigo limpio, documentado y listo para escalar."
+      },
+      "sections": {
+        "presentation": "Presentacion",
+        "skills": "Habilidades",
+        "education": "Formacion"
+      },
+      "presentation": {
+        "p1": "Soy Cristo Macias, desarrollador Full Stack con mas de cinco anos construyendo aplicaciones web que combinan una interfaz cuidada con una arquitectura solida en el backend.",
+        "p2": "Mi especialidad es Angular y el ecosistema TypeScript en el frontend, junto con Node.js y bases de datos relacionales en el servidor. Me importa tanto que el codigo funcione como que sea mantenible por otro desarrollador dentro de dos anos.",
+        "p3": "Trabajo de forma independiente desde 2022, colaborando con empresas y startups que necesitan un desarrollador de confianza, capaz de ir desde la toma de requisitos hasta el despliegue en produccion."
+      },
+      "cta": {
+        "eyebrow": "TIENES UN PROYECTO?",
+        "title": "Hablemos",
+        "button": "Contactar"
+      }
+    },
+    "projects": {
+      "hero": {
+        "eyebrow": "Proyectos",
+        "titleLine1": "Lo que",
+        "titleLine2": "he construido.",
+        "intro": "Una seleccion de proyectos donde combino diseno, arquitectura y desarrollo."
+      }
+    },
+    "contact": {
+      "hero": {
+        "label": "Contacto",
+        "titleLine1": "Hablemos",
+        "titleLine2": "de tu",
+        "titleEmphasis": "idea.",
+        "subtitle": "Cuentame en que estas trabajando. Respondo en menos de 24 horas.",
+        "availability": "Disponible para nuevos proyectos"
+      },
+      "form": {
+        "name": "Nombre",
+        "namePlaceholder": "Tu nombre completo",
+        "email": "Email",
+        "emailPlaceholder": "tu@email.com",
+        "projectType": "Tipo de proyecto",
+        "message": "Mensaje",
+        "messagePlaceholder": "Cuentame sobre tu proyecto..."
+      },
+      "projectTypes": {
+        "placeholder": "- Selecciona una opcion",
+        "webDesign": "Diseno web",
+        "fullstack": "Desarrollo full stack",
+        "consulting": "Consultoria",
+        "other": "Otro"
+      },
+      "errors": {
+        "required": "Campo requerido",
+        "invalidEmail": "Email invalido"
+      },
+      "submit": {
+        "sending": "Enviando...",
+        "send": "Enviar mensaje"
+      },
+      "success": "Mensaje enviado. Te respondo pronto.",
+      "info": {
+        "email": "Email",
+        "location": "Ubicacion",
+        "response": "Respuesta estimada"
+      },
+      "tags": {
+        "design": "Diseno",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "supabase": "Supabase",
+        "python": "Python"
+      }
+    },
+    "login": {
+      "eyebrow": "Acceso",
+      "title": "Bienvenido",
+      "subtitle": "Inicia sesion para acceder a los proyectos y otras experiencias.",
+      "email": "Correo electronico",
+      "emailPlaceholder": "tuemail@ejemplo.com",
+      "password": "Contrasena",
+      "passwordPlaceholder": "Introduce tu contrasena",
+      "togglePasswordAria": "Mostrar u ocultar contrasena",
+      "togglePassword": {
+        "show": "Ver",
+        "hide": "Ocultar"
+      },
+      "remember": "Mantener sesion activa",
+      "submit": {
+        "loading": "Accediendo...",
+        "default": "Iniciar sesion"
+      },
+      "errors": {
+        "invalidEmail": "Introduce un correo valido.",
+        "invalidPassword": "La contrasena debe tener al menos 6 caracteres.",
+        "userNotFound": "El usuario no existe",
+        "wrongPassword": "Contrasena incorrecta",
+        "server": "Error al conectar con el servidor"
+      },
+      "success": "Acceso realizado correctamente.",
+      "registerPrompt": "Aun no tienes cuenta?",
+      "registerLink": "Registrate"
+    },
+    "registro": {
+      "eyebrow": "Registro",
+      "titleLine1": "Crea tu",
+      "titleLine2": "cuenta.",
+      "subtitle": "Unete para acceder a proyectos exclusivos y colaborar en tiempo real.",
+      "formTitle": "Nueva cuenta",
+      "alreadyHaveAccount": "Ya tienes cuenta?",
+      "loginLink": "Inicia sesion",
+      "fields": {
+        "name": "Nombre",
+        "namePlaceholder": "Tu nombre",
+        "email": "Correo electronico",
+        "emailPlaceholder": "tuemail@ejemplo.com",
+        "password": "Contrasena",
+        "passwordPlaceholder": "Minimo 6 caracteres",
+        "confirmPassword": "Repite la contrasena",
+        "confirmPasswordPlaceholder": "Repite tu contrasena"
+      },
+      "errors": {
+        "nameRequired": "El nombre es obligatorio.",
+        "emailRequired": "El correo es obligatorio.",
+        "emailInvalid": "Introduce un correo valido.",
+        "emailDuplicated": "Este correo ya esta registrado.",
+        "passwordMin": "La contrasena debe tener al menos 6 caracteres.",
+        "passwordMismatch": "Las contrasenas no coinciden.",
+        "saveUser": "No se pudo guardar el usuario en el servidor.",
+        "checkEmail": "No se pudo comprobar si el email ya existe."
+      },
+      "submit": {
+        "loading": "Creando cuenta...",
+        "default": "Crear cuenta"
+      },
+      "success": "Cuenta creada correctamente!"
+    }
+  },
+  "components": {
+    "navBar": {
+      "sidebar": {
+        "title": "Menu",
+        "closeMenuAria": "Cerrar menu",
+        "home": "Inicio",
+        "about": "Sobre mi",
+        "projects": "Proyectos",
+        "contact": "Contacto",
+        "login": "Login",
+        "logout": "Logout",
+        "footer": "Portfolio"
+      },
+      "topbar": {
+        "openMenuAria": "Abrir menu",
+        "greeting": "Hola, {{name}}"
+      }
+    },
+    "footer": {
+      "role": "Full Stack Developer",
+      "copyright": "Copyright 2026 Cristo Macias. Todos los derechos reservados.",
+      "githubAria": "GitHub",
+      "linkedinAria": "LinkedIn",
+      "emailAria": "Email",
+      "githubAlt": "Github",
+      "linkedinAlt": "LinkedIn",
+      "emailAlt": "Gmail"
+    },
+    "metodoTrabajo": {
+      "title": "Como trabajo",
+      "steps": {
+        "1": {
+          "title": "Escucho",
+          "description": "Entiendo el problema antes de escribir una linea de codigo. Una buena solucion empieza por hacer las preguntas correctas."
+        },
+        "2": {
+          "title": "Construyo",
+          "description": "Iteraciones rapidas con feedback continuo. Prefiero mostrar avances reales antes que promesas sobre papel."
+        },
+        "3": {
+          "title": "Entrego",
+          "description": "Codigo limpio, documentado y listo para escalar. El proyecto no termina en el deploy, termina cuando funciona de verdad."
+        }
+      }
+    },
+    "numerosVistazo": {
+      "title": "En un vistazo",
+      "metrics": {
+        "projectsDelivered": "Proyectos entregados",
+        "experience": "Experiencia profesional",
+        "stack": "Stack principal"
+      }
+    },
+    "carouselHabilidades": {
+      "goToSlide": "Ir a slide {{index}}"
+    },
+    "encabezadoAboutMe": {
+      "imageAlt": "Foto de perfil de Cristo Macias",
+      "fields": {
+        "location": "Ubicacion",
+        "modality": "Modalidad",
+        "availability": "Disponibilidad",
+        "email": "Email",
+        "github": "GitHub",
+        "linkedin": "LinkedIn"
+      },
+      "values": {
+        "location": "Merida, Espana",
+        "modality": "Remoto / Presencial",
+        "availability": "Abril 2026"
+      }
+    },
+    "proyecto": {
+      "featured": "Proyecto destacado",
+      "github": "GitHub ->",
+      "ariaRepo": "Ver repositorio de {{title}} en GitHub"
+    },
+    "listaProyectos": {
+      "loading": "Cargando proyectos...",
+      "error": "Ha ocurrido un error al cargar los proyectos."
+    },
+    "disponibilidad": {
+      "statusLabel": "Disponible para nuevos proyectos",
+      "detail": "Abril 2026",
+      "response": "Respondo en menos de 24h"
+    }
+  }
+}

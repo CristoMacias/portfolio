@@ -1,0 +1,22 @@
+<section class="seccion-como-trabajo">
+
+    <h2 class="titulo-seccion">{{ 'components.metodoTrabajo.title' | translate }}</h2>
+    <mat-divider class="divisor-titulo"></mat-divider>
+
+    <div class="contenedor-pasos">
+
+        @for (paso of pasos; track paso.numero){
+        <mat-card>
+            <mat-card-content class="contenido-paso">
+                <span class="numero-paso">{{ paso.numero }}</span>
+                <div class="texto-paso">
+                    <h3 class="titulo-paso">{{ paso.titulo | translate }}</h3>
+                    <p class="descripcion-paso">{{ paso.descripcion | translate }}</p>
+                </div>
+            </mat-card-content>
+
+        </mat-card>
+        }
+    </div>
+
+</section>

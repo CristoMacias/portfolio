@@ -1,0 +1,136 @@
+<section class="register">
+  <div class="register__wrapper">
+
+    <div class="register__intro">
+      <p class="register__eyebrow">{{ 'pages.registro.eyebrow' | translate }}</p>
+      <h1 class="register__title">{{ 'pages.registro.titleLine1' | translate }}<br><em>{{ 'pages.registro.titleLine2' | translate }}</em></h1>
+      <p class="register__subtitle">
+        {{ 'pages.registro.subtitle' | translate }}
+      </p>
+      <div class="register__decoration">03</div>
+    </div>
+
+    <div class="register__card">
+      <div class="register__form">
+
+        <div class="register__form-header">
+          <p class="register__form-title">{{ 'pages.registro.formTitle' | translate }}</p>
+          <p class="register__form-subtitle">
+            {{ 'pages.registro.alreadyHaveAccount' | translate }} <a href="/login" class="register__link">{{ 'pages.registro.loginLink' | translate }}</a>
+          </p>
+        </div>
+
+        <div class="register__field">
+          <label class="register__label">{{ 'pages.registro.fields.name' | translate }}</label>
+          <input
+            type="text"
+            name="nombre"
+            class="register__input"
+            [placeholder]="'pages.registro.fields.namePlaceholder' | translate"
+            [ngModel]="form().nombre"
+            (ngModelChange)="updateField('nombre', $event)"
+          />
+
+          @if (enviado() && !form().nombre.trim()) {
+            <small class="register__error">
+              {{ 'pages.registro.errors.nameRequired' | translate }}
+            </small>
+          }
+        </div>
+
+        <div class="register__field">
+          <label class="register__label">{{ 'pages.registro.fields.email' | translate }}</label>
+          <input
+            type="email"
+            name="email"
+            class="register__input"
+            [placeholder]="'pages.registro.fields.emailPlaceholder' | translate"
+            [ngModel]="form().email"
+            (ngModelChange)="updateField('email', $event)"
+          />
+
+          @if (enviado() && !form().email.trim()) {
+            <small class="register__error">
+              {{ 'pages.registro.errors.emailRequired' | translate }}
+            </small>
+          }
+
+          @if (enviado() && form().email.trim() && !emailValido()) {
+            <small class="register__error">
+              {{ 'pages.registro.errors.emailInvalid' | translate }}
+            </small>
+          }
+
+          @if (emailDuplicado()) {
+            <small class="register__error">
+              {{ 'pages.registro.errors.emailDuplicated' | translate }}
+            </small>
+          }
+        </div>
+
+        <div class="register__field">
+          <label class="register__label">{{ 'pages.registro.fields.password' | translate }}</label>
+          <input
+            type="password"
+            name="password"
+            class="register__input"
+            [placeholder]="'pages.registro.fields.passwordPlaceholder' | translate"
+            [ngModel]="form().password"
+            (ngModelChange)="updateField('password', $event)"
+          />
+
+          @if (enviado() && form().password.length < 6) {
+            <small class="register__error">
+              {{ 'pages.registro.errors.passwordMin' | translate }}
+            </small>
+          }
+        </div>
+
+        <div class="register__field">
+          <label class="register__label">{{ 'pages.registro.fields.confirmPassword' | translate }}</label>
+          <input
+            type="password"
+            name="confirmar"
+            class="register__input"
+            [placeholder]="'pages.registro.fields.confirmPasswordPlaceholder' | translate"
+            [ngModel]="form().confirmar"
+            (ngModelChange)="updateField('confirmar', $event)"
+          />
+
+          @if (enviado() && form().confirmar && form().password !== form().confirmar) {
+            <small class="register__error">
+              {{ 'pages.registro.errors.passwordMismatch' | translate }}
+            </small>
+          }
+        </div>
+
+        <button
+          type="button"
+          class="register__submit"
+          [disabled]="cargando()"
+          (click)="registrar()">
+          {{ cargando() ? ('pages.registro.submit.loading' | translate) : ('pages.registro.submit.default' | translate) }}
+        </button>
+
+        @if (errorServidor()) {
+          <p class="register__error">
+            {{ errorServidor()! | translate }}
+          </p>
+        }
+
+        @if (exito()) {
+          <p class="register__success">
+            {{ 'pages.registro.success' | translate }}
+          </p>
+        }
+
+        <p class="register__register">
+          {{ 'pages.registro.alreadyHaveAccount' | translate }}
+          <a href="/login" class="register__link">{{ 'pages.registro.loginLink' | translate }}</a>
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+</section>

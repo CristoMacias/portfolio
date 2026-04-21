@@ -1,0 +1,72 @@
+{
+  "skillSections": [
+    {
+      "id": 1,
+      "title": "Frontend",
+      "items": [
+        { "id": 1, "name": "Angular", "percent": 92 },
+        { "id": 2, "name": "TypeScript", "percent": 90 },
+        { "id": 3, "name": "RxJS", "percent": 85 },
+        { "id": 4, "name": "NgRx", "percent": 80 },
+        { "id": 5, "name": "SCSS / CSS", "percent": 88 },
+        { "id": 6, "name": "HTML5", "percent": 95 }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Backend & Datos",
+      "items": [
+        { "id": 7, "name": "Node.js", "percent": 82 },
+        { "id": 8, "name": "NestJS", "percent": 78 },
+        { "id": 9, "name": "Express", "percent": 80 },
+        { "id": 10, "name": "PostgreSQL", "percent": 75 },
+        { "id": 11, "name": "MongoDB", "percent": 70 },
+        { "id": 12, "name": "REST API", "percent": 88 }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Herramientas",
+      "items": [
+        { "id": 13, "name": "Git", "percent": 92 },
+        { "id": 14, "name": "GitHub", "percent": 90 },
+        { "id": 15, "name": "Docker", "percent": 72 },
+        { "id": 16, "name": "VS Code", "percent": 95 },
+        { "id": 17, "name": "Figma", "percent": 65 },
+        { "id": 18, "name": "Postman", "percent": 88 }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Metodologías",
+      "items": [
+        { "id": 19, "name": "Scrum", "percent": 88 },
+        { "id": 20, "name": "Agile", "percent": 90 },
+        { "id": 21, "name": "Kanban", "percent": 75 },
+        { "id": 22, "name": "Clean Architecture", "percent": 80 },
+        { "id": 23, "name": "SOLID", "percent": 78 },
+        { "id": 24, "name": "TDD", "percent": 70 }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "DevOps",
+      "items": [
+        { "id": 25, "name": "CI/CD", "percent": 75 },
+        { "id": 26, "name": "GitHub Actions", "percent": 72 },
+        { "id": 27, "name": "Docker Compose", "percent": 70 },
+        { "id": 28, "name": "Nginx", "percent": 65 }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Testing",
+      "items": [
+        { "id": 29, "name": "Jasmine", "percent": 80 },
+        { "id": 30, "name": "Karma", "percent": 78 },
+        { "id": 31, "name": "Jest", "percent": 75 },
+        { "id": 32, "name": "Cypress", "percent": 70 }
+      ]
+    }
+  ]
+}

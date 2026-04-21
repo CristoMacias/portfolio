@@ -1,0 +1,18 @@
+{
+  "usuarios": [
+    {
+      "id": "01",
+      "nombre": "Admin",
+      "email": "admin@admin.es",
+      "password": "admin123",
+      "creadoEn": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "1776683204403",
+      "nombre": "Sandra",
+      "email": "sandra@gmail.com",
+      "password": "123456",
+      "creadoEn": "2026-04-20T11:06:44.403Z"
+    }
+  ]
+}

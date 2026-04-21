@@ -1,0 +1,18 @@
+<div class="carta-habilidad">
+    <h3 class="carta-habilidad__titulo">{{ seccion.title }}</h3>
+
+    <div class="lista-habilidades">
+        @for (item of seccion.items; track item.name) {
+        <div class="item-habilidad">
+            <div class="item-habilidad__encabezado">
+                <span class="item-habilidad__nombre">{{ item.name }}</span>
+                <span class="item-habilidad__porcentaje">{{ item.percent }}%</span>
+            </div>
+
+            <div class="item-habilidad__barra">
+                <div class="item-habilidad__relleno" [style.width.%]="item.percent"></div>
+            </div>
+        </div>
+    }
+    </div>
+</div>

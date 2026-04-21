@@ -1,0 +1,129 @@
+.proyectos-section {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 5rem 2.5rem 4rem;
+  box-sizing: border-box;
+}
+
+.proyectos-section__header {
+  margin-bottom: 3.5rem;
+}
+
+.proyectos-section__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.proyectos-section__eyebrow-line {
+  display: block;
+  width: 30px;
+  height: 1px;
+  background-color: #8f8f8f;
+}
+
+.proyectos-section__eyebrow-text {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #5f6b7a;
+}
+
+.proyectos-section__title {
+  margin: 0;
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(4rem, 10vw, 8.5rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  color: #0a0a0a;
+}
+
+.proyectos-section__intro {
+  max-width: 780px;
+  margin: 2.5rem 0 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  line-height: 1.7;
+  font-weight: 300;
+  color: #556070;
+}
+
+.proyectos-section__contenedor {
+  padding: 1.5rem;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.proyectos-section__destacado {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.proyectos-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.proyectos-section__estado {
+  margin: 2rem 0 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  color: #555555;
+}
+
+.proyectos-section__estado--error {
+  color: #b42318;
+}
+
+@media (max-width: 1024px) {
+  .proyectos-section {
+    padding: 4.5rem 2rem 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .proyectos-section {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .proyectos-section__header {
+    margin-bottom: 2.5rem;
+  }
+
+  .proyectos-section__eyebrow {
+    margin-bottom: 1.5rem;
+  }
+
+  .proyectos-section__intro {
+    margin-top: 2rem;
+    max-width: 100%;
+  }
+
+  .proyectos-section__contenedor {
+    padding: 1rem;
+  }
+
+  .proyectos-section__grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .proyectos-section {
+    padding: 3rem 1.25rem 2.5rem;
+  }
+
+  .proyectos-section__intro {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+}

@@ -1,0 +1,18 @@
+<section class="seccion-numeros">
+
+  <h2 class="titulo-seccion">{{ 'components.numerosVistazo.title' | translate }}</h2>
+  <mat-divider class="divisor-titulo"></mat-divider>
+
+  <div class="contenedor-metricas">
+    <mat-card
+      *ngFor="let metrica of metricas"
+      class="tarjeta-metrica"
+      appearance="outlined">
+      <mat-card-content class="contenido-metrica">
+        <span class="valor-metrica">{{ metrica.valor }}</span>
+        <span class="etiqueta-metrica">{{ metrica.etiqueta | translate }}</span>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</section>

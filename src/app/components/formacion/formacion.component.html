@@ -1,0 +1,15 @@
+<div class="contenedor-pasos">
+    
+    @for (paso of pasos; track paso.numero){
+    <mat-card>
+        <mat-card-content class="contenido-paso">
+            <span class="numero-paso">{{ paso.numero }}</span>
+            <div class="texto-paso">
+                <h3 class="titulo-paso">{{ paso.titulo }}</h3>
+                <p class="descripcion-paso">{{ paso.descripcion }}</p>
+            </div>
+        </mat-card-content>
+
+    </mat-card>
+    }
+</div>
