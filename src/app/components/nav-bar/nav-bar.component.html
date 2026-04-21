@@ -65,7 +65,7 @@
       <div class="topbar__right">
         @if (sesionIniciada) {
         <span class="topbar__user">
-          {{ 'components.navBar.topbar.greeting' | translate:{ name: nombre } }}
+          {{ 'components.navBar.topbar.greeting' | translate:{ name: (nombre | titlecase) } }}
         </span>
         }
 

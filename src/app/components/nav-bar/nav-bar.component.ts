@@ -5,10 +5,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Usuario } from '../../models/usuario';
+import { TitleCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-nav-bar',
-  imports: [MatSidenavModule, MatIconModule, MatButtonModule, RouterModule, TranslateModule],
+  imports: [MatSidenavModule, MatIconModule, MatButtonModule, RouterModule, TranslateModule, TitleCasePipe],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss',
   standalone: true

@@ -15,4 +15,5 @@ export class ProyectsService {
   getProyects(): Observable<Proyecto[]> {
     return this.http.get<Proyecto[]>(this.apiUrl);
   }
+  
 }

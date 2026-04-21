@@ -5,9 +5,12 @@ export const logedInGuard: CanActivateFn = () => {
   const router = inject(Router);
 
   const raw  = localStorage.getItem('authUser');
+  const rawSession = sessionStorage.getItem('authUser');
   const user = raw ? JSON.parse(raw) : null;
+  const userSession = rawSession ? JSON.parse(rawSession) : null;
 
-  if (user?.email) {
+
+  if (user?.email || userSession?.email) {
     return true;
   }
 
