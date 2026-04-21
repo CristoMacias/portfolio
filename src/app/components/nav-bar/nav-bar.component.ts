@@ -72,5 +72,6 @@ export class NavBarComponent implements OnInit {
     this.usuario = null;
     this.nombre = null;
     this.sesionIniciada = false;
+    window.location.href = '/home';
   }
 }

@@ -7,6 +7,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { adminGuard } from './core/guards/auth.guard';
+import { logedInGuard } from './core/guards/loged-in.guard';
 
 
 export const routes: Routes = [
@@ -14,7 +15,7 @@ export const routes: Routes = [
     { path: 'home', component: HomeComponent},
     { path: 'aboutMe', component: AboutMeComponent},
     { path: 'contact', component: ContactComponent},
-    { path: 'projects', component: ProjectsComponent},
+    { path: 'projects', component: ProjectsComponent, canActivate: [logedInGuard]},
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegistroComponent },
     { path: 'admin', component: AdminComponent, canActivate: [adminGuard] },

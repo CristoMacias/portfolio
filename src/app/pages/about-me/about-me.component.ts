@@ -30,7 +30,7 @@ export class AboutMeComponent {
     tl.from('.js-eyebrow-line', {
       scaleX: 0,
       transformOrigin: 'left center',
-      duration: 0.8
+      duration: 0.6
     })
     .from('.js-eyebrow-text', {
       opacity: 0,
@@ -45,12 +45,12 @@ export class AboutMeComponent {
     .from('.js-hero-intro', {
       opacity: 0,
       y: 24,
-      duration: 0.85
+      duration: 0.6
     }, '-=0.45')
     .from('.presentacion', {
       opacity: 0,
       y: 24,
-      duration: 0.85
+      duration: 0.6
     }, '-=0.45');
   }
 
